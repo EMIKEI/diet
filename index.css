@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Noto Sans KR Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff)
+      format("woff"),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf)
+      format("opentype");
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  overflow-x: hidden;
+}
+
+.selectFoodZone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  margin-left: 50px;
+}
+.selectFoodZone::-webkit-scrollbar {
+  display: none;
+}
+
+.foodBut {
+  border: 0;
+  outline: 0;
+  margin: 0px 5px;
+  padding-left: 20px;
+  height: 40px;
+  width: 105px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-position: 3px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  font-family: "Noto Sans KR Light";
+}
+
+.mainZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodImg {
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-size: 250px;
+  background-repeat: no-repeat;
+
+  filter: blur(0.7px) hue-rotate(400deg) saturate(80%) brightness(80%)
+    drop-shadow(0 0 10px #e0e0e0);
+}
+
+.fixedAd {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  body {
+    margin: 0 10%;
+  }
+  .selectFoodZone {
+    margin: 0;
+  }
+}
