@@ -14,7 +14,3 @@ foodBut[1].addEventListener("click", function(){
     foodImg.style.backgroundImage = "url('http://collectionpng.com/images/13732.png')"
     foodImg.style.filter= EW;
 })
-foodBut[2].addEventListener("click", function(){
-    foodImg.style.filter="none"
-    foodImg.style.backgroundImage = "url('https://bk-emea-prd.s3.amazonaws.com/sites/burgerking.co.uk/files/18492_BK_Web_SMALLSALAD_500x540px.png')"
-})
