@@ -1,18 +1,22 @@
-const body = document.querySelector("body");
 const loadingPage = document.querySelector(".loadingPage")
 const selectFoodZone = document.querySelector(".selectFoodZone");
+const foodButs = document.querySelector(".foodButs");
 const foodBut = document.querySelectorAll(".foodBut");
 const mainZone = document.querySelector(".mainZone");
 const foodImg = document.querySelector(".foodImg");
 const FixedAd = document.querySelector(".FixedAd");
 
-const EW = "blur(0.7px) hue-rotate(400deg) saturate(80%) brightness(70%) drop-shadow(0 0 10px #e0e0e0) contrast(135%)";
+const scrollFoodZone = document.querySelectorAll(".scrollFoodZone");
+const selectFoodZoneWidth = selectFoodZone.offsetWidth;
+
+const EW = "blur(0.7px) hue-rotate(400deg) saturate(80%) brightness(70%) drop-shadow(0 7.5px 7.5px #78893A) contrast(135%)";
+
 const foodImgBackgroundImg = [
-    "url('https://i.pinimg.com/originals/5a/d7/3b/5ad73be991746c4cad6338fb42fbc20c.png')", 
+    "url('https://han.gl/XhaeW')", 
     "url('http://collectionpng.com/images/13732.png')"
 ];
 
-loadingPage.style.display="flex"
+loadingPage.style.display="flex";
 
 window.addEventListener("load", function(){
     setTimeout(function(){
@@ -20,13 +24,52 @@ window.addEventListener("load", function(){
     },2000)
 })
 
-foodBut[0].addEventListener("click", function(){
-    foodImg.style.backgroundImage = foodImgBackgroundImg[0];
-    foodImg.style.filter= EW;
-})
+for(let i = 0; i< foodBut.length; i++ ){
+    foodBut[i].addEventListener("click", function(){
 
-foodBut[1].addEventListener("click", function(){
-    foodImg.style.backgroundImage = foodImgBackgroundImg[1];
-    foodImg.style.filter= EW;
-})
+        for(let i2 = 0; i2 < foodBut.length; i2++){
+            foodBut[i2].classList.remove('selectedBut')
+        }
 
+        foodBut[i].classList.add('selectedBut')
+        foodImg.style.backgroundImage = foodImgBackgroundImg[i]; 
+        foodImg.style.filter = EW;
+    })
+}
+
+const foodButsWidth = foodButs.offsetWidth;
+
+// 왼쪽 scrollFoodZone
+scrollFoodZone[0].addEventListener("mouseenter", function(){
+    foodButs.scrollBy({
+        left: -foodButsWidth/4,
+        behavior:"smooth"
+    })
+    scrollfoodZone1=
+    setInterval(function(){
+        foodButs.scrollBy({
+            left: -foodButsWidth/4,
+            behavior:"smooth"
+        })
+    },470)
+})
+scrollFoodZone[0].addEventListener("mouseout",function(){
+    clearInterval(scrollfoodZone1)
+})
+//오른쪽 scrollFoodZone
+scrollFoodZone[1].addEventListener("mouseenter", function(){
+        foodButs.scrollBy({
+            left: foodButsWidth/4,
+            behavior:"smooth"
+        })
+        scrollfoodZone2=
+        setInterval(function(){
+            foodButs.scrollBy({
+                left: foodButsWidth/4,
+                behavior:"smooth"
+            })
+        },470)
+})
+scrollFoodZone[1].addEventListener("mouseout",function(){
+    clearInterval(scrollfoodZone2)
+})

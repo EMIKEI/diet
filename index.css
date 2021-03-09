@@ -9,13 +9,16 @@
     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf)
       format("opentype");
 }
+html {
+  overflow: hidden;
+}
 body {
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-rows: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.15fr 1fr 0.2fr;
   overflow: hidden;
-  background-color: #fcfcfc;
+  background-color: #f2f2f2;
 }
 
 .loadingPage {
@@ -33,15 +36,26 @@ body {
 }
 
 .selectFoodZone {
+  display: grid;
+  grid-template-columns: 0.08fr 1fr 0.08fr;
+  width: 100%;
+  height: 100%;
+}
+.scrollFoodZone {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  cursor: pointer;
+}
+.foodButs {
   display: flex;
   align-items: center;
-  justify-content: center;
+  z-index: 999;
   overflow-x: scroll;
 }
-.selectFoodZone::-webkit-scrollbar {
+.foodButs::-webkit-scrollbar {
   display: none;
 }
-
 .foodBut {
   border: 0;
   outline: 0;
@@ -50,16 +64,22 @@ body {
   padding-left: 20px;
   height: 40px;
   width: 105px;
+  min-width: 100px;
   border-radius: 20px;
   cursor: pointer;
 
+  background-color: #e8eee0;
   background-position: 5px;
   background-size: 25px;
   background-repeat: no-repeat;
 
   font-family: "Noto Sans KR Light";
-  background-color: #768d50;
+  box-shadow: 0 3px 10px #c5c5c5;
   z-index: 999;
+}
+
+.selectedBut {
+  filter: brightness(96%);
 }
 
 .mainZone {
@@ -77,7 +97,7 @@ body {
 .dustImg {
   width: 100%;
   height: 100%;
-  filter: brightness(80%) saturate(80%) opacity(90%) blur(0.7px);
+  filter: brightness(80%) saturate(80%) opacity(90%) blur(0.4px);
 }
 
 .foodImg {
@@ -89,7 +109,31 @@ body {
   background-repeat: no-repeat;
 }
 
-.fixedAd {
+.storeButZone {
   display: flex;
   justify-content: center;
+}
+
+.storeBut {
+  all: unset;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 1.5px 3px 10px #c5c5c5;
+  z-index: 999;
+  cursor: pointer;
+  background: #e8eee0 url(https://han.gl/9FxIM) center/cover no-repeat;
+  background-size: 98%;
+}
+.storeBut:hover {
+  filter: brightness(92.5%);
+}
+
+@media (max-width: 768px) {
+  .selectFoodZone {
+    grid-template-columns: 1fr;
+  }
+  .scrollFoodZone {
+    display: none;
+  }
 }
