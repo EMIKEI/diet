@@ -4,18 +4,18 @@ const foodButs = document.querySelector(".foodButs");
 const foodBut = document.querySelectorAll(".foodBut");
 const mainZone = document.querySelector(".mainZone");
 const foodImg = document.querySelector(".foodImg");
-const FixedAd = document.querySelector(".FixedAd");
+const storeBut = document.querySelector(".storeBut")
 
 const scrollFoodZone = document.querySelectorAll(".scrollFoodZone");
 const selectFoodZoneWidth = selectFoodZone.offsetWidth;
 
-const EW = "blur(0.7px) hue-rotate(400deg) saturate(80%) brightness(70%) drop-shadow(0 7.5px 7.5px #78893A) contrast(135%)";
-
 const foodImgBackgroundImg = [
     "url('https://han.gl/XhaeW')", 
-    "url('http://collectionpng.com/images/13732.png')"
+    "url('http://collectionpng.com/images/13732.png')",
+    "url('https://han.gl/4msCX')"
 ];
 
+//lodingPage
 loadingPage.style.display="flex";
 
 window.addEventListener("load", function(){
@@ -24,6 +24,7 @@ window.addEventListener("load", function(){
     },2000)
 })
 
+// click foodBut
 for(let i = 0; i< foodBut.length; i++ ){
     foodBut[i].addEventListener("click", function(){
 
@@ -33,10 +34,11 @@ for(let i = 0; i< foodBut.length; i++ ){
 
         foodBut[i].classList.add('selectedBut')
         foodImg.style.backgroundImage = foodImgBackgroundImg[i]; 
-        foodImg.style.filter = EW;
     })
 }
 
+
+//scroll foodButs
 const foodButsWidth = foodButs.offsetWidth;
 
 // 왼쪽 scrollFoodZone
@@ -72,4 +74,10 @@ scrollFoodZone[1].addEventListener("mouseenter", function(){
 })
 scrollFoodZone[1].addEventListener("mouseout",function(){
     clearInterval(scrollfoodZone2)
+})
+
+//storeBut
+
+storeBut.addEventListener("click", function(){
+    alert("준비 중")
 })
