@@ -37,7 +37,7 @@ body {
 
 .selectFoodZone {
   display: grid;
-  grid-template-columns: 0.08fr 1fr 0.08fr;
+  grid-template-columns: 0.08fr 1fr 0.06fr 0.08fr;
   width: 100%;
   height: 100%;
 }
@@ -50,7 +50,7 @@ body {
   align-items: center;
   font-size: 2rem;
   color: #383838;
-  cursor: pointer;
+  cursor: default;
 }
 .foodButs {
   display: flex;
@@ -95,6 +95,26 @@ body {
   filter: brightness(97.5%);
   box-shadow: 0 1px 10px #c5c5c5;
 }
+.storeZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.storeBut {
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.storeBut:hover {
+  filter: brightness(102.5%);
+}
 
 .mainZone {
   display: flex;
@@ -111,33 +131,12 @@ body {
   background-repeat: no-repeat;
 
   filter: blur(0.7px) hue-rotate(400deg) saturate(65%) brightness(85%)
-    drop-shadow(0 0px 100px #a6cf95) contrast(97%);
-}
-
-.storeButZone {
-  display: flex;
-  justify-content: center;
-}
-
-.storeBut {
-  all: unset;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  box-shadow: 1.5px 3px 10px #c5c5c5;
-  z-index: 999;
-  cursor: pointer;
-  background: #e8eee0;
-  text-align: center;
-  position: fixed;
-}
-.storeBut:hover {
-  filter: brightness(102.5%);
+    drop-shadow(0 0px 70px #a6cf95) contrast(97%);
 }
 
 @media (max-width: 768px) {
   .selectFoodZone {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 0.2fr;
   }
   .scrollFoodZone {
     display: none;
