@@ -111,9 +111,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: brightness(97%);
 }
 .storeBut:hover {
-  filter: brightness(102.5%);
+  filter: brightness(100%);
 }
 
 .mainZone {
@@ -129,7 +130,6 @@ body {
   background-position: center;
   background-size: 300px;
   background-repeat: no-repeat;
-
   filter: blur(0.7px) hue-rotate(400deg) saturate(65%) brightness(85%)
     drop-shadow(0 0px 70px #a6cf95) contrast(97%);
 }
