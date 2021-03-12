@@ -12,7 +12,7 @@ const selectFoodZoneWidth = selectFoodZone.offsetWidth;
 const foodImgBackgroundImg = [
     "url('https://han.gl/XhaeW')", 
     "url('http://collectionpng.com/images/13732.png')",
-    "url('http://www.jawsfood.com/uploads/product/20180605409363.png')",
+    "url('https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2Vuw/image/NKzQL4XkH0ugI222QJQAGFPKwfU.png')",
 ];
 
 //lodingPage
