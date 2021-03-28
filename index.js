@@ -12,9 +12,8 @@ const selectFoodZoneWidth = selectFoodZone.offsetWidth;
 const foodImgBackgroundImg = [
     "url('https://han.gl/XhaeW')", 
     "url('http://collectionpng.com/images/13732.png')",
-    "url('https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2Vuw/image/NKzQL4XkH0ugI222QJQAGFPKwfU.png')",
+    "url('http://kukde.co.kr/wordpress/wp-content/uploads/2016/05/tt.png')",
 ];
-
 //lodingPage
 loadingPage.style.display="flex";
 
@@ -31,7 +30,6 @@ for(let i = 0; i< foodBut.length; i++ ){
         for(let i2 = 0; i2 < foodBut.length; i2++){
             foodBut[i2].classList.remove('selectedBut')
         }
-
         foodBut[i].classList.add('selectedBut')
         foodImg.style.backgroundImage = foodImgBackgroundImg[i]; 
     })

@@ -74,7 +74,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
 
-  background-color: #e8eee0;
+  background-color: #94af61;
   background-position: 5px;
   background-size: 25px;
   background-repeat: no-repeat;
@@ -111,12 +111,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: brightness(97%);
+  transition: 0.15s;
 }
 .storeBut:hover {
-  filter: brightness(100%);
+  filter: brightness(110%);
 }
-
+.storeBut img {
+  border-radius: 7.5px;
+  background-color: #c3ccb7;
+}
 .mainZone {
   display: flex;
   justify-content: center;
@@ -130,6 +133,7 @@ body {
   background-position: center;
   background-size: 300px;
   background-repeat: no-repeat;
+
   filter: blur(0.7px) hue-rotate(400deg) saturate(65%) brightness(85%)
     drop-shadow(0 0px 70px #a6cf95) contrast(97%);
 }
