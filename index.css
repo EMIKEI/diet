@@ -1,29 +1,13 @@
-@font-face {
-  font-family: "Noto Sans KR Light";
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2)
-      format("woff2"),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff)
-      format("woff"),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf)
-      format("opentype");
-}
-html {
-  overflow: hidden;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
 body {
   margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 0.15fr 1fr 0.2fr;
-  overflow: hidden;
-  background-color: #f2f2f2;
 }
 
 .loadingPage {
   position: fixed;
-  z-index: 1000;
+  z-index: 999;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background-color: #383838;
@@ -33,74 +17,18 @@ body {
   align-items: center;
   user-select: none;
   transition: all ease-out 0.25s;
+  overflow: hidden;
 }
 
-.selectFoodZone {
+nav {
+  width: 100%;
+  height: 54px;
+  position: fixed;
+  z-index: 998;
+  top: 0;
   display: grid;
-  grid-template-columns: 0.08fr 1fr 0.06fr 0.08fr;
-  width: 100%;
-  height: 100%;
-}
-.scrollFoodZone {
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: #383838;
-  cursor: default;
-}
-.foodButs {
-  display: flex;
-  align-items: center;
-  z-index: 999;
-  overflow-x: scroll;
-}
-.foodButs::-webkit-scrollbar {
-  display: none;
-}
-
-.foodBut {
-  border: 0;
-  outline: 0;
-
-  margin: 0px 5px;
-  padding-left: 20px;
-  height: 40px;
-  width: 105px;
-  min-width: 100px;
-  border-radius: 20px;
-  cursor: pointer;
-
-  background-color: #94af61;
-  background-position: 5px;
-  background-size: 25px;
-  background-repeat: no-repeat;
-
-  font-family: "Noto Sans KR Light";
-  box-shadow: 0 3px 10px #c5c5c5;
-  z-index: 999;
-}
-.foodBut:hover {
-  filter: brightness(102.5%);
-}
-
-.selectedBut {
-  filter: brightness(97.5%);
-  box-shadow: 0 1px 10px #c5c5c5;
-}
-.selectedBut:hover {
-  filter: brightness(97.5%);
-  box-shadow: 0 1px 10px #c5c5c5;
-}
-.storeZone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
+  grid-template-columns: 1fr 80px;
+  background-color: #f2f2f2;
 }
 .storeBut {
   width: 100%;
@@ -112,37 +40,111 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.15s;
+  cursor: pointer;
+  float: right;
 }
 .storeBut:hover {
   filter: brightness(110%);
 }
-.storeBut img {
-  border-radius: 7.5px;
-  background-color: #c3ccb7;
-}
-.mainZone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.foodButs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 997;
+  margin-top: 54px;
 }
 
+.foodBut {
+  border: 0;
+  outline: 0;
+
+  height: 45vh;
+  margin: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background-color: #588a56;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #292929;
+  text-shadow: 0 0 30px #525252;
+  box-shadow: 0 3px 10px #b9b9b9;
+  z-index: 997;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foodBut:hover {
+  filter: brightness(102.5%);
+}
+
+.foodBut img {
+  position: absolute;
+  z-index: -999;
+  width: 25vw;
+}
+
+.alertFoodImg {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000e1;
+  top: 0;
+}
+.foodImgZone {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #313131;
+  width: 500px;
+  max-width: 80vw;
+}
+.foodImgZone button {
+  all: unset;
+  padding: 8px 20px;
+  background-color: #588a56;
+  box-shadow: 0 2px 10px #c4c4c4;
+  border-radius: 10px;
+  float: right;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+}
 .foodImg {
   width: 100%;
   height: 100%;
-
-  background-position: center;
-  background-size: 300px;
-  background-repeat: no-repeat;
-
+  user-select: none;
   filter: blur(0.7px) hue-rotate(400deg) saturate(65%) brightness(85%)
     drop-shadow(0 0px 70px #a6cf95) contrast(97%);
 }
 
 @media (max-width: 768px) {
-  .selectFoodZone {
-    grid-template-columns: 1fr 0.2fr;
+  .foodButs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 997;
+    margin-top: 54px;
   }
-  .scrollFoodZone {
-    display: none;
+  .foodBut img {
+    position: absolute;
+    z-index: -999;
+    width: 40vw;
+  }
+  .foodImgZone {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #313131;
+    width: 350px;
+    max-width: 80vw;
   }
 }
