@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  background-color: #f5f5f5;
 }
 
 .loadingPage {
@@ -22,26 +23,29 @@ body {
 
 nav {
   width: 100%;
-  height: 54px;
+  height: 70px;
   position: fixed;
   z-index: 998;
   top: 0;
   display: grid;
   grid-template-columns: 1fr 80px;
-  background-color: #f2f2f2;
 }
 .storeBut {
+  all: unset;
   width: 100%;
   height: 100%;
   max-width: 60px;
   max-height: 60px;
-  border-radius: 3px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.15s;
   cursor: pointer;
   float: right;
+  background-color: #f9f9f9;
+  margin-top: 7.5px;
+  box-shadow: 0 2px 10px #bebebe;
 }
 .storeBut:hover {
   filter: brightness(110%);
@@ -51,19 +55,19 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 997;
-  margin-top: 54px;
+  margin-top: 70px;
 }
 
 .foodBut {
   border: 0;
   outline: 0;
 
-  height: 45vh;
-  margin: 10px;
-  border-radius: 20px;
+  height: 42.5vh;
+  margin: 5px;
+  border-radius: 30px;
   cursor: pointer;
 
-  background-color: #588a56;
+  background-color: #383838;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -71,10 +75,11 @@ nav {
   font-family: "Noto Sans KR";
   font-weight: 500;
   font-size: 1.05rem;
-  color: #292929;
-  text-shadow: 0 0 30px #525252;
+  color: #f5f5f5;
+  text-shadow: 0 0 20px #000000;
   box-shadow: 0 3px 10px #b9b9b9;
   z-index: 997;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,6 +93,7 @@ nav {
   position: absolute;
   z-index: -999;
   width: 25vw;
+  filter: brightness(70%) blur(10.5px);
 }
 
 .alertFoodImg {
@@ -98,10 +104,19 @@ nav {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: #000000e1;
   top: 0;
 }
+.foodImgBack {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  top: 0;
+  filter: opacity(85%);
+}
 .foodImgZone {
+  z-index: 0;
   background-color: #f2f2f2;
   padding: 30px;
   border-radius: 20px;
@@ -121,10 +136,9 @@ nav {
 }
 .foodImg {
   width: 100%;
-  height: 100%;
   user-select: none;
-  filter: blur(0.7px) hue-rotate(400deg) saturate(65%) brightness(85%)
-    drop-shadow(0 0px 70px #a6cf95) contrast(97%);
+  filter: blur(0.9px) hue-rotate(415deg) saturate(65%) brightness(80%)
+    drop-shadow(0 0px 70px #a6cf95) contrast(93%);
 }
 
 @media (max-width: 768px) {
@@ -132,7 +146,6 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 997;
-    margin-top: 54px;
   }
   .foodBut img {
     position: absolute;

@@ -1,16 +1,21 @@
-const loadingPage = document.querySelector(".loadingPage")
+const loadingPage = document.querySelector(".loadingPage");
+
 const foodButs = document.querySelector(".foodButs");
 const foodBut = document.querySelectorAll(".foodBut");
+
 const foodImgZone = document.querySelector(".foodImgZone");
+const foodImgBack = document.querySelector(".foodImgBack");
 const foodImg = document.querySelector(".foodImg");
 const alertFoodImg = document.querySelector(".alertFoodImg");
 const closeFoodImg = document.querySelector(".foodImgZone button");
+
 const storeBut = document.querySelector(".storeBut")
 
 const foodImgBackgroundImg = [
     'https://han.gl/XhaeW', 
     'http://collectionpng.com/images/13732.png',
-    'https://han.gl/QB4GK'
+    'https://han.gl/QB4GK',
+    'https://han.gl/kZVeg'
 ];
 
 
@@ -28,6 +33,10 @@ for(let i = 0; i< foodBut.length; i++ ){
 }
 
 closeFoodImg.addEventListener("click", function(){
+    alertFoodImg.style.display = "none";
+})
+
+foodImgBack.addEventListener("click", function(){
     alertFoodImg.style.display = "none";
 })
 
