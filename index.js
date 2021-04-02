@@ -22,6 +22,7 @@ const foodImgBackgroundImg = [
 window.addEventListener("load", function(){
     setTimeout(function(){
         loadingPage.style.display = "none";
+        document.querySelector("html").scrollTo(0, 0)
     },2000)
 })
 
@@ -41,5 +42,5 @@ foodImgBack.addEventListener("click", function(){
 })
 
 storeBut.addEventListener("click", function(){
-    alert("준비 중")
+    window.location.href = "store.html"
 })
