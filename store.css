@@ -23,6 +23,10 @@ p {
   margin-left: 10px;
   box-shadow: 0 2px 10px #bebebe;
   z-index: 999;
+  cursor: pointer;
+}
+.goHomeBut:hover {
+  filter: brightness(110%);
 }
 .goHomeBut img {
   filter: brightness(10%);
@@ -50,7 +54,6 @@ p {
   box-shadow: 0 3px 10px #b9b9b9;
   z-index: 997;
   display: grid;
-  grid-template-rows: 1fr 0.25fr 0.5fr;
   background-color: #383838;
 }
 .sellButs span p {
@@ -72,11 +75,23 @@ p {
   border-radius: 20px;
   margin: auto;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .sellButs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 997;
+  }
+}
+@media (max-height: 560px) {
+  .sellButs span button {
+    position: absolute;
+    width: auto;
+    border-radius: 30px;
+    padding: 0 10px;
+  }
+  .sellButs span p {
+    display: none;
   }
 }
