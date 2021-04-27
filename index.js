@@ -26,17 +26,18 @@ let goScrollLeft = null;
 let goScrollRight =null;
 
 window.addEventListener("load", function(){
+
     setTimeout(function(){
         loadingPage.style.display = "none";
     },2000)
-})
 
-for(let i = 0; i< foodBut.length; i++ ){
-    foodBut[i].addEventListener("click", function(){
-        foodImg.src = foodImgBackgroundImg[this.name];
-        alertFoodImg.style.display = "flex";
-    })
-}
+    for(let i = 0; i< foodBut.length; i++ ){
+        foodBut[i].addEventListener("click", function(){
+            foodImg.src = foodImgBackgroundImg[this.name];
+            alertFoodImg.style.display = "flex";
+        })
+    }
+})
 
 //alertFoodTmg
 closeFoodImg.addEventListener("click", function(){
