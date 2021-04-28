@@ -31,6 +31,10 @@ window.addEventListener("load", function(){
         loadingPage.style.display = "none";
     },2000)
 
+    for(let ii = 0; ii< foodBut.length; ii++ ){
+            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+")";
+        }
+        
     for(let i = 0; i< foodBut.length; i++ ){
         foodBut[i].addEventListener("click", function(){
             foodImg.src = foodImgBackgroundImg[this.name];

@@ -93,39 +93,21 @@ main::-webkit-scrollbar {
   height: 300px;
   min-width: 300px;
   margin: 10px;
+  padding: 0;
   border-radius: 12%;
   cursor: pointer;
 
-  background-color: #f5f5f5;
-  background-position: center;
-  background-size: 90px;
+  background-position: 300% center;
+  background-size: 250px;
   background-repeat: no-repeat;
 
   box-shadow: 0 3px 10px #d6d6d6;
   z-index: 997;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   transition: 0.25s ease-in-out;
 }
-.foodBut.pizza {
-  background-image: url("https://han.gl/XhaeW");
-}
-.foodBut.chicken {
-  /* background: linear-gradient(to right, #b75428, #dc8805); */
-  background-image: url("http://collectionpng.com/images/13732.png");
-}
-.foodBut.tteokbokki {
-  background-image: url("https://han.gl/QB4GK");
-}
-.foodBut.burger {
-  background-image: url("https://han.gl/kZVeg");
-}
-
 .foodBut:hover {
-  filter: brightness(101.25%);
+  /* filter: brightness(101.25%); */
   transform: translateY(-5px);
 }
 .foodBut p {
@@ -160,16 +142,20 @@ main::-webkit-scrollbar {
   all: unset;
   padding: 10px 25px;
   background-color: #84b271;
+  color: #303030;
   box-shadow: 0 3px 10px #a6cf95;
   border-radius: 18px;
   float: right;
   font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -1px;
   cursor: pointer;
 }
 .foodImg {
-  width: 85%;
+  width: 75%;
   display: block;
-  margin: 30px auto;
+  margin: 10% auto;
   user-select: none;
   filter: blur(0.9px) hue-rotate(415deg) saturate(65%) brightness(80%)
     drop-shadow(0 0px 70px #a6cf95) contrast(93%);
