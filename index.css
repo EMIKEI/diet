@@ -97,10 +97,10 @@ main::-webkit-scrollbar {
   border-radius: 12%;
   cursor: pointer;
 
-  background-position: 300% center;
-  background-size: 250px;
+  background-position: 150px center;
+  background-size: 300px;
   background-repeat: no-repeat;
-
+  background-color: #ffffff;
   box-shadow: 0 3px 10px #d6d6d6;
   z-index: 997;
 

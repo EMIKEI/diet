@@ -32,7 +32,7 @@ window.addEventListener("load", function(){
     },2000)
 
     for(let ii = 0; ii< foodBut.length; ii++ ){
-            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+")";
+            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+"), linear-gradient(to left, #e0e0e0, #fff)";
         }
         
     for(let i = 0; i< foodBut.length; i++ ){
