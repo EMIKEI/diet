@@ -30,7 +30,7 @@ let goScrollRight =null;
 loadingPageImg.src = foodImgBackgroundImgArray[Math.floor(Math.random()*foodImgBackgroundImgArray.length)];
 
 window.addEventListener("load", function(){
-    loadingPageImg.style.transform = "rotate(-1080deg)";
+    loadingPageImg.style.filter = "hue-rotate(415deg) saturate(65%) brightness(80%) contrast(93%)";
 
     setTimeout(function(){
         loadingPage.style.display = "none";

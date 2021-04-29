@@ -29,7 +29,6 @@ body {
 .loadingPage img {
   transition: ease-out 2s;
   width: 70px;
-  filter: hue-rotate(415deg) saturate(65%) brightness(80%) contrast(93%);
 }
 
 nav {
