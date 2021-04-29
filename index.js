@@ -1,4 +1,5 @@
 const loadingPage = document.querySelector(".loadingPage");
+const loadingPageImg = document.querySelector(".loadingPage img");
 
 const foodButs = document.querySelector(".foodButs");
 const foodBut = document.querySelectorAll(".foodBut");
@@ -21,18 +22,22 @@ const foodImgBackgroundImg = {
     tteokbokki: 'https://han.gl/QB4GK',
     burger: 'https://han.gl/kZVeg'
 };
+const foodImgBackgroundImgArray = ['https://han.gl/XhaeW','http://collectionpng.com/images/13732.png', 'https://han.gl/QB4GK', 'https://han.gl/kZVeg'];
 
 let goScrollLeft = null;
 let goScrollRight =null;
 
+loadingPageImg.src = foodImgBackgroundImgArray[Math.floor(Math.random()*foodImgBackgroundImgArray.length)];
+
 window.addEventListener("load", function(){
+    loadingPageImg.style.transform = "rotate(-1080deg)";
 
     setTimeout(function(){
         loadingPage.style.display = "none";
-    },2000)
+    },2500)
 
     for(let ii = 0; ii< foodBut.length; ii++ ){
-            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+"), linear-gradient(to left, #e0e0e0, #fff)";
+            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+"), linear-gradient(to left, #DFDFDF, #f8f8f8)";
         }
         
     for(let i = 0; i< foodBut.length; i++ ){
