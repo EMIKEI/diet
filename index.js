@@ -3,15 +3,17 @@ const loadingPageImg = document.querySelector(".loadingPage img");
 
 const foodButs = document.querySelector(".foodButs");
 const foodBut = document.querySelectorAll(".foodBut");
-const main = document.querySelector("main");
+const foodButImg = document.querySelectorAll(".foodBut img");
+const foodButZone = document.querySelector(".foodButZone");
+
+
+const saladButSpan = document.querySelectorAll(".saladBut span");
 
 const foodImgZone = document.querySelector(".foodImgZone");
 const foodImgBackground = document.querySelector(".foodImgBackground");
 const foodImg = document.querySelector(".foodImg");
 const alertFoodImg = document.querySelector(".alertFoodImg");
 const closeFoodImg = document.querySelector(".foodImgZone button");
-
-const storeBut = document.querySelector(".storeBut");
 
 const rightScrollZone = document.querySelector(".rightScrollZone");
 const leftScrollZone = document.querySelector(".leftScrollZone");
@@ -37,7 +39,7 @@ window.addEventListener("load", function(){
     },2500)
 
     for(let ii = 0; ii< foodBut.length; ii++ ){
-            foodBut[ii].style.backgroundImage = "url("+foodImgBackgroundImg[foodBut[ii].name]+"), linear-gradient(to left, #DFDFDF, #f8f8f8)";
+            foodButImg[ii].src = foodImgBackgroundImg[foodButImg[ii].alt];
         }
         
     for(let i = 0; i< foodBut.length; i++ ){
@@ -57,33 +59,35 @@ foodImgBackground.addEventListener("click", function(){
     alertFoodImg.style.display = "none";
 })
 
-storeBut.addEventListener("click", function(){
-    alert("준비 중")
-})
+for(let s = 0; s<saladButSpan.length; s++){
+    saladButSpan[s].addEventListener("click", function(){
+        alert("상품이 품절되었습니다")
+    })
+}
 
 //scrollZone
 leftScrollZone.addEventListener("mouseover", function(){
-    main.scrollBy({
-        left:-main.offsetWidth/2,
+    foodButZone.scrollBy({
+        left:-foodButZone.offsetWidth/2,
         behavior:"smooth"
     })
     goScrollLeft=
     setInterval(function(){
-        main.scrollBy({
-            left:-main.offsetWidth/2,
+        foodButZone.scrollBy({
+            left:-foodButZone.offsetWidth/2,
             behavior:"smooth"
         })
     }, 500)
 })
 rightScrollZone.addEventListener("mouseover", function(){
-    main.scrollBy({
-        left:main.offsetWidth/2,
+    foodButZone.scrollBy({
+        left:foodButZone.offsetWidth/2,
         behavior:"smooth"
     })
     goScrollRight=
     setInterval(function(){
-        main.scrollBy({
-            left:main.offsetWidth/2,
+        foodButZone.scrollBy({
+            left:foodButZone.offsetWidth/2,
             behavior:"smooth"
         })
     }, 500)

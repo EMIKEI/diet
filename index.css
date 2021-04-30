@@ -31,36 +31,33 @@ body {
   width: 70px;
 }
 
-nav {
-  width: 100%;
-  height: 70px;
-  z-index: 998;
-  top: 0;
+main {
+  overflow-x: scroll;
   display: grid;
-  grid-template-columns: 1fr 80px;
+  grid-template-rows: 1fr 1fr;
 }
-.storeBut {
-  all: unset;
-  width: 100%;
-  height: 100%;
-  max-width: 60px;
-  max-height: 60px;
-  border-radius: 20px;
+
+.foodButZone {
+  overflow-x: scroll;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: 0.15s;
-  cursor: pointer;
-  float: right;
-  margin-top: 7.5px;
-  filter: brightness(120%);
 }
-.storeBut:hover {
-  filter: brightness(150%);
+.foodButZone::-webkit-scrollbar {
+  display: none;
+}
+.foodButsTitle {
+  position: fixed;
+  margin-bottom: 250px;
+  margin-left: 5.5vw;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  color: #383838;
 }
 
 .scrollZone {
-  height: 300px;
+  height: 165px;
   width: 22.5px;
   position: absolute;
   background-image: linear-gradient(to left, #d4d4d4f3, #eeeeeeb0);
@@ -77,14 +74,7 @@ nav {
   border-radius: 10px 0px 0px 10px;
   background-image: linear-gradient(to right, #dadadaf3, #eeeeeeb0);
 }
-main {
-  overflow-x: scroll;
-  display: flex;
-  align-items: center;
-}
-main::-webkit-scrollbar {
-  display: none;
-}
+
 .foodButs {
   display: flex;
   flex-direction: row;
@@ -96,33 +86,82 @@ main::-webkit-scrollbar {
   border: 0;
   outline: 0;
 
-  height: 300px;
-  min-width: 300px;
-  margin: 10px;
+  height: 165px;
+  min-width: 165px;
+  margin: 5px;
   padding: 0;
-  border-radius: 12%;
+  border-radius: 15%;
   cursor: pointer;
 
-  background-position: 130px center;
-  background-size: 320px;
-  background-repeat: no-repeat;
-  background-color: #f8f8f8;
+  background-image: linear-gradient(to bottom, #f5c64d, #d58e3d);
   box-shadow: 0 3px 10px #d6d6d6;
   z-index: 997;
 
   transition: 0.25s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .foodBut:hover {
   /* filter: brightness(101.25%); */
   transform: translateY(-5px);
 }
-.foodBut p {
+.foodBut img {
+  width: 100px;
+}
+
+.saladBut {
+  border: 0;
+  outline: 0;
+
+  height: 185px;
+  min-width: 165px;
+  margin: 5px;
+  padding: 0;
+  border-radius: 15%;
+  cursor: pointer;
+
+  background-image: linear-gradient(to bottom, #3fe35b, #19a360);
+  box-shadow: 0 3px 10px #d6d6d6;
+
+  z-index: 997;
   font-family: "Noto Sans KR";
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: #525252;
-  margin-top: 70%;
+  font-weight: 700;
+  font-size: 0.95rem;
   letter-spacing: -1px;
+  color: #383838;
+
+  transition: 0.25s ease-in-out;
+
+  display: grid;
+  grid-template-rows: 1fr 70px;
+}
+
+.saladBut img {
+  width: 100px;
+  margin: auto;
+  margin-top: 45px;
+}
+.saladBut span {
+  width: 50px;
+  background-color: #f2f2f2;
+  padding: 8px 10px;
+  border-radius: 15px;
+  transition: 0.25s;
+  margin-left: 10px;
+}
+.saladBut p {
+  transition: 0.25s;
+  font-size: 0.9rem;
+  text-align: left;
+  color: #f5f5f5;
+  font-weight: 400;
+  float: left;
+  margin-left: 10px;
+}
+.saladBut span:hover {
+  filter: brightness(101.25%);
 }
 .alertFoodImg {
   display: none;
