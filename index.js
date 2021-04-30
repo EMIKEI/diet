@@ -67,27 +67,27 @@ for(let s = 0; s<saladButSpan.length; s++){
 
 //scrollZone
 leftScrollZone.addEventListener("mouseover", function(){
-    foodButZone.scrollBy({
-        left:-foodButZone.offsetWidth/2,
+    foodButs.scrollBy({
+        left:-foodButs.offsetWidth/2,
         behavior:"smooth"
     })
     goScrollLeft=
     setInterval(function(){
-        foodButZone.scrollBy({
-            left:-foodButZone.offsetWidth/2,
+        foodButs.scrollBy({
+            left:-foodButs.offsetWidth/2,
             behavior:"smooth"
         })
     }, 500)
 })
 rightScrollZone.addEventListener("mouseover", function(){
-    foodButZone.scrollBy({
-        left:foodButZone.offsetWidth/2,
+    foodButs.scrollBy({
+        left:foodButs.offsetWidth/2,
         behavior:"smooth"
     })
     goScrollRight=
     setInterval(function(){
-        foodButZone.scrollBy({
-            left:foodButZone.offsetWidth/2,
+        foodButs.scrollBy({
+            left:foodButs.offsetWidth/2,
             behavior:"smooth"
         })
     }, 500)
