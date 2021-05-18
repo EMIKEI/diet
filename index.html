@@ -1,119 +1,47 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>diet</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="https://han.gl/XhaeW" type="image/png">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <section class="loadingPage">
-        <img src="" alt="loading...">
-    </section>
-    
-    <nav>
-        <div></div>
-    </nav>
-
+    <nav></nav>
     <main>
-        <section class="foodButZone">
-            <div class="foodButScreen" ></div>
-            <p class="foodButsTitle">먹고싶은 음식을 눌러보세요</p>
-            <section class="foodButs">
-                <div class="scrollZone leftScrollZone"><!--scrollZone--></div>
-                <button class="foodBut" name="pizza">
-                    <img src="" alt="pizza">
-                </button>
-                <button class="foodBut" name="chicken">
-                    <img src="" alt="chicken">
-                </button>
-                <button class="foodBut" name="tteokbokki">
-                    <img src="" alt="tteokbokki">
-                </button>
-                <button class="foodBut" name="burger">
-                    <img src="" alt="burger">
-                </button>
-                <button class="foodBut" name="chicken">
-                    <img src="" alt="chicken">
-                </button>
-                <button class="foodBut" name="pizza">
-                    <img src="" alt="pizza">
-                </button>
-                <button class="foodBut" name="burger">
-                    <img src="" alt="burger">
-                </button>
-                <button class="foodBut" name="tteokbokki">
-                    <img src="" alt="tteokbokki">
-                </button>
-                <button class="foodBut" name="pizza">
-                    <img src="" alt="pizza">
-                </button>
-                <button class="foodBut" name="burger">
-                    <img src="" alt="burger">
-                </button>
-                <button class="foodBut" name="chicken">
-                    <img src="" alt="chicken">
-                </button>
-                <button class="foodBut" name="tteokbokki">
-                    <img src="" alt="tteokbokki">
-                </button>
-                <button class="foodBut" name="burger">
-                    <img src="" alt="burger">
-                </button>
-                <button class="foodBut" name="pizza" style="margin-right: 2.5vw;">
-                    <img src="" alt="pizza">
-                </button>
-                <div class="scrollZone rightScrollZone"><!--scrollZone--></div>
-            </section>
-        </section>
+        <section class="contents_section">
+            <p>
+                인기있는 살찌는 음식
+            </p>
+            <div class="foodButZone">
+                <div class="scroll left">
+                    <img src="https://han.gl/B32JF" width="30px" alt="">
+                </div>
+                <button class="foodBut" name="pizza"></button>
+                <button class="foodBut" name="chicken"></button>
+                <button class="foodBut" name="tteokbokki"></button>
+                <button class="foodBut" name="burger"></button>
+                <button class="foodBut" name="pizza"></button>
+                <button class="foodBut" name="chicken"></button>
+                <button class="foodBut" name="tteokbokki"></button>
+                <button class="foodBut" name="burger"></button>
+                <button class="foodBut" name="pizza"></button>
+                <button class="foodBut" name="chicken"></button>
+                <button class="foodBut" name="tteokbokki"></button>
+                <button class="foodBut" name="burger"></button>
+                <div class="scroll right">
+                        <img src="https://han.gl/qWQrY" width="30px" alt="">
+                    </div>
+                </div>
 
-        <section class="foodButZone">
-            <p class="foodButsTitle">샐러드를 구매하세요</p>
-            <section class="foodButs">
-                <button class="saladBut" name="salad">
-                    <img src="https://han.gl/JAxfx">
-                    <div style="display: flex; align-items: center;">
-                        <p>초록 샐러드<br><strong style="font-size: 1rem;">5.99$</strong></p>
-                        <span>구매</span>
+                <section>
+                    <div class="foodImgZone">
+                        <img src="" class="hide" alt="food image" draggable="false">
                     </div>
-                        
-                </button>
-                <button class="saladBut" name="salad">
-                    <img src="https://han.gl/JAxfx">
-                    <div style="display: flex; align-items: center;">
-                        <p>초록 샐러드<br><strong style="font-size: 1rem;">5.99$</strong></p>
-                        <span>구매</span>
-                    </div>
-                        
-                </button>
-                <button class="saladBut" name="salad">
-                    <img src="https://han.gl/JAxfx">
-                    <div style="display: flex; align-items: center;">
-                        <p>초록 샐러드<br><strong style="font-size: 1rem;">5.99$</strong></p>
-                        <span>구매</span>
-                    </div>
-                        
-                </button>
-                <button class="saladBut" name="salad">
-                    <img src="https://han.gl/JAxfx">
-                    <div style="display: flex; align-items: center;">
-                        <p>초록 샐러드<br><strong style="font-size: 1rem;">5.99$</strong></p>
-                        <span>구매</span>
-                    </div>
-                        
-                </button>
-            </section>
+                </section>
         </section>
     </main>
-
-    <section class="alertFoodImg">
-        <div class="foodImgZone">
-            <img class="foodImg" draggable="false" alt="foodImg">
-            <button>닫기</button>
-        </div>
-        <div class="foodImgBackground"></div>
-    </section>
-    <script src="index.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
