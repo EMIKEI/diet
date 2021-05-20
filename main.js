@@ -22,11 +22,13 @@ const foodButImg = {
 }
 //click food button
 {
+    const foodImgZoneText = document.querySelector(".foodImgZone h4")
     for(let i = 0; i < foodBut.length; i++){
         foodBut[i].addEventListener("click", click)
     }
     function click(){
         foodImg.classList.remove("hide")
+        foodImgZoneText.classList.add("hide")
        foodImg.src = `${foodButImg[this.name]}`;
     }
 }
