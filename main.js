@@ -22,17 +22,34 @@ const foodButImg = {
 }
 //click food button
 {
-    const foodImgZoneText = document.querySelector(".foodImgZone h4")
+    const foodImgZoneText = document.querySelector(".foodImgZone h4");
+    const explainBut = document.querySelector(".explainBut");
+
+    const foodsKcal = {
+        pizza: "266kcal",
+        chicken: "246kcal",
+        tteokbokki: "300kcal",
+        burger: "295kcal"
+    }
+    
     for(let i = 0; i < foodBut.length; i++){
         foodBut[i].addEventListener("click", click)
     }
+    
     function click(){
         foodImg.classList.remove("hide")
+        explainBut.classList.remove("hide")
         foodImgZoneText.classList.add("hide")
-       foodImg.src = `${foodButImg[this.name]}`;
+        foodImg.src = `${foodButImg[this.name]}`;
+        explainBut.innerHTML = `${this.name} l ${foodsKcal[this.name]}`
+        explainBut.name = this.name;
     }
+    
+    explainBut.addEventListener("click", function(){
+        alert(`${this.name}의 열량은 100g에 ${foodsKcal[this.name]}입니다.`)
+    })
 }
-//mouse over scroll
+    //mouse over scroll
 {
     const leftscroll = document.querySelector(".scroll.left")
     const rightscroll = document.querySelector(".scroll.right")
