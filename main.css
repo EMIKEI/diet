@@ -32,9 +32,9 @@ body {
   background-size: 30vw;
 }
 .bottom_gradient {
-  background-image: linear-gradient(to top, #8c8c8c, #00000000);
+  background-image: linear-gradient(to top, #6b6b6b, #00000000);
   width: 100vw;
-  height: 12vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
