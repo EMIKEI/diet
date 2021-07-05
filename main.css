@@ -17,7 +17,7 @@ body {
   position: fixed;
   background-image: linear-gradient(to bottom, #dadada, #00000000);
 }
-.main {
+.butZone {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,6 +30,46 @@ body {
   border-radius: 50%;
   background: no-repeat center #ececec;
   background-size: 30vw;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  background-color: #292929ea;
+}
+.main_foodZone {
+  width: 95vw;
+  max-width: 90vh;
+  height: 95vw;
+  max-height: 90vh;
+  background-image: linear-gradient(-30deg, #53924a, #50b672);
+  border-radius: 50%;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  box-shadow: 0 0 700px #000;
+}
+.foodZone_closeBut {
+  background-color: #00000000;
+  max-width: 50px;
+  font-size: 3rem;
+  color: #f8f8f8;
+}
+.foodZone_img {
+  margin: auto;
+  width: 75vw;
+  max-width: 70vh;
+  filter: brightness(70%) hue-rotate(425deg) saturate(1.2) contrast(45%);
+}
+.food_explain {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Noto Sans KR";
+  color: #f2f2f2;
+  letter-spacing: -0.5px;
 }
 .bottom_gradient {
   background-image: linear-gradient(to top, #6b6b6b, #00000000);
@@ -48,4 +88,7 @@ body {
 }
 .hide {
   filter: opacity(0);
+}
+.remove {
+  display: none;
 }
