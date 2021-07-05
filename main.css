@@ -30,6 +30,7 @@ body {
   border-radius: 50%;
   background: no-repeat center #ececec;
   background-size: 30vw;
+  cursor: pointer;
 }
 .main {
   width: 100vw;
@@ -39,7 +40,7 @@ body {
   align-items: center;
   top: 0;
   position: fixed;
-  background-color: #292929ea;
+  background-color: #292929f8;
 }
 .main_foodZone {
   width: 95vw;
@@ -53,10 +54,14 @@ body {
   box-shadow: 0 0 700px #000;
 }
 .foodZone_closeBut {
-  background-color: #00000000;
-  max-width: 50px;
-  font-size: 3rem;
+  background-color: #50b672;
+  max-width: 52px;
+  max-height: 52px;
+  border-radius: 50%;
+  font-size: 40px;
   color: #f8f8f8;
+  cursor: pointer;
+  margin-left: 85%;
 }
 .foodZone_img {
   margin: auto;
@@ -70,6 +75,7 @@ body {
   font-family: "Noto Sans KR";
   color: #f2f2f2;
   letter-spacing: -0.5px;
+  cursor: pointer;
 }
 .bottom_gradient {
   background-image: linear-gradient(to top, #6b6b6b, #00000000);
@@ -91,4 +97,20 @@ body {
 }
 .remove {
   display: none;
+}
+.noScroll {
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .butZone {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20vh;
+  }
+  .foodBut {
+    width: 30vw;
+    height: 30vw;
+    background-size: 20vw;
+  }
 }

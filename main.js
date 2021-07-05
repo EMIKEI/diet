@@ -35,15 +35,17 @@ const foodsKcal = {
         foodZone_img.src = foodImg[this.name];
         food_explain.textContent = `${this.name}에 대한 설명`;
         bottom_gradient.classList.add("hide");
-
-        foodZone_closeBut.addEventListener("click", function(){
-            main.classList.add("remove");
-        })
-        food_explain.addEventListener("click", function(){
-            alert("준비 중입니다.")
-        })
+        document.querySelector("body").classList.add("noScroll")
     }
-}//foodBut click event
+    foodZone_closeBut.addEventListener("click", function(){
+        main.classList.add("remove");
+        document.querySelector("body").classList.remove("noScroll")
+    })
+
+    food_explain.addEventListener("click", function(){
+        alert("준비 중입니다.")
+    })
+}//foodBut,foodZone_closeBut, food_explain click event
 {
     const bottom_gradient = document.querySelector(".bottom_gradient");
     const top = document.querySelector(".top")
