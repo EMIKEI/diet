@@ -13,6 +13,7 @@ body {
   width: 100vw;
   text-align: center;
   font-family: "Noto Sans KR";
+  text-shadow: 0 0 20px #929292;
   letter-spacing: -0.8px;
   position: fixed;
   background-image: linear-gradient(to bottom, #dadada, #00000000);
@@ -51,26 +52,26 @@ body {
   border-radius: 50%;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-  box-shadow: 0 0 700px #000;
 }
 .foodZone_closeBut {
-  background-color: #50b672;
-  max-width: 52px;
-  max-height: 52px;
-  border-radius: 50%;
+  background-color: #50b67200;
   font-size: 40px;
   color: #f8f8f8;
   cursor: pointer;
   margin-left: 85%;
+  text-shadow: 0 0 5px #d6d6d6;
 }
 .foodZone_img {
   margin: auto;
   width: 75vw;
   max-width: 70vh;
-  filter: brightness(70%) hue-rotate(425deg) saturate(1.2) contrast(45%);
+  filter: brightness(60%) hue-rotate(425deg) saturate(300%) contrast(45%)
+    blur(0.7px) drop-shadow(2px 5px 15px #548b58);
+  user-select: none;
 }
 .food_explain {
-  text-align: center;
+  width: fit-content;
+  margin: auto;
   margin-bottom: 50px;
   font-family: "Noto Sans KR";
   color: #f2f2f2;
@@ -106,11 +107,15 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 15vw;
     margin-top: 20vh;
   }
   .foodBut {
-    width: 30vw;
-    height: 30vw;
-    background-size: 20vw;
+    width: 20vw;
+    height: 20vw;
+    background-size: 15vw;
+  }
+  .foodZone_closeBut {
+    font-size: 55px;
   }
 }
